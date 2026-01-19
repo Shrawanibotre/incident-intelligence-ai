@@ -39,29 +39,60 @@ This project is inspired by real-world enterprise AI/ML use cases in IT Operatio
 
 ## Project Architecture
 
-Raw Incident Data
-↓
-Curated Incident Table
-↓
-Feature Engineering
-↓
-Risk Prediction (LightGBM/XGBoost)
-↓
-Proactive Alerts
+                ┌────────────────────────────┐
+                │    Raw Incident Data       │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │  Curated Incident Table    │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │   Feature Engineering      │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │ Risk Prediction Models     │
+                │ (LightGBM / XGBoost)       │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │    Proactive Alerts        │
+                └────────────────────────────┘
 
-Parallel Flow:
-Text (Title + Description)
-↓
-TF-IDF Vectorization
-↓
-Root Cause Classification
-↓
-Vector Similarity Search (FAISS)
-↓
-RAG-style Reasoning
 
+┌─────────────────────────────────────────────────────────────┐
+│                   Parallel Intelligence Flow                │
+└─────────────────────────────────────────────────────────────┘
 
----
+                ┌────────────────────────────┐
+                │  Title + Description       │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │  TF-IDF Vectorization      │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │ Root Cause Classification  │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │ Vector Similarity (FAISS)  │
+                └──────────────┬─────────────┘
+                               │
+                               ▼
+                ┌────────────────────────────┐
+                │  RAG-style Reasoning Layer │
+                └────────────────────────────┘
+
 
 ## Technologies Used
 
