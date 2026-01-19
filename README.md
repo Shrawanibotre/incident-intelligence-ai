@@ -37,7 +37,8 @@ This project is inspired by real-world enterprise AI/ML use cases in IT Operatio
 
 ---
 
-## Project Architecture              +----------------------+
+## Project Architecture    
+              +----------------------+
               |  Raw Incident Data   |
               +----------+-----------+
                          |
